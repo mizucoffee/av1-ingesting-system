@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #262730;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 92px;
+  padding: 0px 50px;
+  background-color: #1a1b26;
+}
+
+header h1 {
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-style: normal;
+  font-size: 24pt;
+}
+
+header img {
+  height: 24px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 134px);
+  grid-template-rows: repeat(8, 100px);
+  gap: 20px 24px;
+  padding: 24px;
+}
+
+.stats-box {
+  border: solid 2px #0f0f0fd0;
+  background-color: #323441;
+}
+
+.stats-box h2 {
+  font-size: 14pt;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 5px 12px;
+  color: #fff;
+  border-bottom: solid 2px #fff;
+}
+
+.live-stats {
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 2;
+}
+
+.system-stats {
+  grid-column: 1 / span 3;
+  grid-row: 5 / span 2;
+}
+
+.onair-box {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0f0f0f;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.onair-box h2 {
+  font-size: 60pt;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  line-height: 1em;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.onair-box.active h2 {
+  color: #e74b37;
+}
+
+.onair-box div {
+  font-size: 18pt;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+video {
+  grid-column: 4 / span 8;
+  grid-row: 1 / span 6;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  cursor: none;
+}
+
+.chart-container {
+  height: 100%;
+  width: 350px;
+}
+
+#fps-chart {
+  grid-column: 1 / span 4;
+  grid-row: 7 / span 2;
+}
+
+#bitrate-chart {
+  grid-column: 5 / span 4;
+  grid-row: 7 / span 2;
+}
+
+#render-time-chart {
+  grid-column: 9 / span 4;
+  grid-row: 7 / span 2;
+}
+
+.chart {
+  display: flex;
+}
+
+.chart-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+}
+
+.chart-info .label {
+  font-size: 14pt;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #a3a2af;
+  line-height: 1em;
+  margin-bottom: 4px;
+}
+
+.chart-info .value {
+  font-size: 48pt;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  line-height: 1em;
+}
+
+.chart-info .value span {
+  font-size: 32pt;
+  margin-left: 6px;
+}
+
+#vu-meters {
+  grid-column: 12;
+  grid-row: 1 / span 6;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 16px;
+}
+
+.stats-box .label {
+  font-size: 12pt;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  color: #a3a2af;
+  line-height: 1em;
+  margin-bottom: 4px;
+}
+
+.stats-box .value {
+  font-size: 14pt;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/obs-websocket-js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>AV1 Ingesting System</h1>
+      <img src="logo.png" alt="" />
+    </header>
+
+    <main>
+      <div class="onair-box">
+        <h2>ON AIR</h2>
+        <div class="time-code">00:00:00:00</div>
+      </div>
+      <div class="stats-box live-stats">
+        <h2>Live Stream Status</h2>
+        <div class="stats-container">
+          <div id="live-stats-service">
+            <div class="label">Service</div>
+            <div class="value"></div>
+          </div>
+          <div id="live-stats-protocol">
+            <div class="label">Protocol</div>
+            <div class="value"></div>
+          </div>
+          <div id="live-stats-output-bytes">
+            <div class="label">Output Bytes</div>
+            <div class="value"></div>
+          </div>
+          <div id="live-stats-dropped-frames">
+            <div class="label">Dropped Frames (network problems)</div>
+            <div class="value"></div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-box system-stats">
+        <h2>System Status</h2>
+        <div class="stats-container">
+          <div id="system-stats-cpu">
+            <div class="label">CPU Usage (%)</div>
+            <div class="value"></div>
+          </div>
+          <div id="system-stats-ram">
+            <div class="label">RAM Usage (%)</div>
+            <div class="value"></div>
+          </div>
+          <div id="system-stats-render-lag">
+            <div class="label">Dropped Frames (rendering lag)</div>
+            <div class="value"></div>
+          </div>
+          <div id="system-stats-encode-lag">
+            <div class="label">Dropped Frames (encodeing lag)</div>
+            <div class="value"></div>
+          </div>
+        </div>
+      </div>
+      <video id="video"></video>
+      <div id="fps-chart" class="chart">
+        <div class="chart-container">
+          <canvas></canvas>
+        </div>
+        <div class="chart-info">
+          <div class="label">FRAME RATE</div>
+          <div class="value">0<span>fps</span></div>
+        </div>
+      </div>
+      <div id="bitrate-chart" class="chart">
+        <div class="chart-container">
+          <canvas></canvas>
+        </div>
+        <div class="chart-info">
+          <div class="label">DATA RATE</div>
+          <div class="value">0<span>Mb/s</span></div>
+        </div>
+      </div>
+      <div id="render-time-chart" class="chart">
+        <div class="chart-container">
+          <canvas></canvas>
+        </div>
+        <div class="chart-info">
+          <div class="label">Frame Render Time</div>
+          <div class="value">0<span>ms</span></div>
+        </div>
+      </div>
+      <div id="vu-meters" width="134" height="700"></div>
+    </main>
+    <script src="const.js"></script>
+    <script src="dom.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
